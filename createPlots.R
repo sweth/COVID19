@@ -162,10 +162,10 @@ plot1 = DF_plot_d %>%
   scale_x_continuous(breaks = seq(0, max(DF_plot_d$value), 2)) +
   labs(
     title = "Confirmed Covid deaths",
-    subtitle = "Arranged by number of days since 1 or more deaths (or since 20200122 if first death before then)",
+    subtitle = "Days = # days since 1+ deaths (or since 20200122 if first death before then)",
     x = "Days after 1 confirmed death",
     y = "Confirmed deaths (log scale)",
-    caption = paste0("Source: Johns Hopkins CSSE (fetched ", date(), ")")
+    caption = paste0("Source: Johns Hopkins CSSE (fetched ", date(), " ", Sys.timezone(), ")")
   ) +
   theme_minimal() +
   theme(legend.position = "none")
@@ -198,10 +198,10 @@ plot2 = DF_plot_c %>%
   scale_x_continuous(breaks = seq(0, max(DF_plot_c$value), 2)) +
   labs(
     title = "Confirmed Covid cases",
-    subtitle = "Arranged by number of days since 1 or more confirmed cases (or since 20200122 if first case before then)",
+    subtitle = "Days = # days since 1+ confirmed cases (or since 20200122 if first case before then)",
     x = "Days after 1 confirmed cases",
     y = "Confirmed cases (log scale)",
-    caption = paste0("Source: Johns Hopkins CSSE (fetched ", date(), ")")
+    caption = paste0("Source: Johns Hopkins CSSE (fetched ", date(), " ", Sys.timezone(), ")")
   ) +
   theme_minimal() +
   theme(legend.position = "none")
